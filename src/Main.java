@@ -14,13 +14,15 @@ public class Main {
         if(selectedInput.equalsIgnoreCase("Sorting")){
             System.out.println("Enter sorting algorithm preferred");
             String algoSelected = userInput.nextLine();
-            SearchingAndSortingAlgorithm sortingAlgorithm = new SearchingAndSortingAlgorithm(algoSelected, aa);
+            new SearchingAndSortingAlgorithm(algoSelected, aa);
         } else if (selectedInput.equalsIgnoreCase("Searching")) {
             System.out.println("Enter searching algorithm preferred");
             String algoSelected = userInput.nextLine();
             System.out.println("Enter number to search for");
             int number = userInput.nextInt();
-            SearchingAndSortingAlgorithm searchingAlgorithm = new SearchingAndSortingAlgorithm(algoSelected, aa, number);
+            new SearchingAndSortingAlgorithm(algoSelected, aa, number);
+        }else{
+            System.out.println("Oops! Invalid input");
         }
 
     }
