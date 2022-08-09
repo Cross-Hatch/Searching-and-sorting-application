@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -8,7 +9,21 @@ public class Main {
 
         int [] aa = {3, 5, 1 , 8, 7, 2, 91, 2};
 
-        System.out.print("Enter 1 for searching or 2 for sorting: ");
+//        System.out.println("Enter array");
+//        String input = userInput.nextLine();
+//
+////        Arrays.toString(input.split(","));
+//
+//        int [] ab = Integer.parseInt(input.split(","))
+//        System.out.println();
+
+//        System.out.println(Arrays.toString(input.split(",")));
+
+//        int cpinput = Integer.parseInt(input);
+
+//        userInput.useDelimiter(",");
+
+        System.out.print("Enter 1 for sorting or 2 for searching: ");
         String selectedInput = userInput.nextLine();
 
         if(selectedInput.equalsIgnoreCase("one") || selectedInput.equals("1")){
