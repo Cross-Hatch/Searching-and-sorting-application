@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -7,21 +6,10 @@ public class Main {
 
         Scanner userInput = new Scanner(System.in);
 
-        int [] aa = {3, 5, 1 , 8, 7, 2, 91, 2};
+        System.out.println("Enter array");
+        String input = userInput.nextLine();
 
-//        System.out.println("Enter array");
-//        String input = userInput.nextLine();
-//
-////        Arrays.toString(input.split(","));
-//
-//        int [] ab = Integer.parseInt(input.split(","))
-//        System.out.println();
-
-//        System.out.println(Arrays.toString(input.split(",")));
-
-//        int cpinput = Integer.parseInt(input);
-
-//        userInput.useDelimiter(",");
+        int [] array = StringArrayToIntegerArray.method(input);
 
         System.out.print("Enter 1 for sorting or 2 for searching: ");
         String selectedInput = userInput.nextLine();
@@ -30,7 +18,7 @@ public class Main {
             System.out.println("Enter sorting algorithm preferred");
             String algoSelected = userInput.nextLine().trim();
             if (algoSelected.equalsIgnoreCase("bubbleSort") || algoSelected.equalsIgnoreCase("selectionSort")){
-                new SearchingAndSortingAlgorithm(algoSelected, aa);
+                new SearchingAndSortingAlgorithm(algoSelected, array);
             }else {
                 System.out.println("Sorry, sorting algorithm not found!");
             }
@@ -39,7 +27,7 @@ public class Main {
             String algoSelected = userInput.nextLine();
             System.out.println("Enter number to search for");
             int number = userInput.nextInt();
-            new SearchingAndSortingAlgorithm(algoSelected, aa, number);
+            new SearchingAndSortingAlgorithm(algoSelected, array, number);
         }else{
             System.out.println("Oops! Invalid input");
         }
