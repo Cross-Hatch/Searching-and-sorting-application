@@ -22,19 +22,28 @@ public class Main {
                     if (selectedInput.equalsIgnoreCase("one") || selectedInput.equals("1")) {
                         System.out.println("Enter sorting algorithm preferred");
                         String algoSelected = userInput.nextLine().trim();
+
                         if (algoSelected.equalsIgnoreCase("bubbleSort") || algoSelected.equalsIgnoreCase("selectionSort")) {
                             new SearchingAndSortingAlgorithm(algoSelected, array);
                         } else {
                             System.out.println("Sorry, sorting algorithm not found!");
                         }
+
                     } else if (selectedInput.equalsIgnoreCase("two") || selectedInput.equals("2")) {
                         System.out.println("Enter searching algorithm preferred");
                         String algoSelected = userInput.nextLine();
-                        System.out.println("Enter number to search for");
-                        int number = userInput.nextInt();
-                        new SearchingAndSortingAlgorithm(algoSelected, array, number);
+
+                        if (algoSelected.equalsIgnoreCase("linearSearch")) {
+                            System.out.println("Enter number to search for");
+                            int number = userInput.nextInt();
+                            new SearchingAndSortingAlgorithm(algoSelected, array, number);
+                        } else {
+                            System.out.println("Sorry, searching algorithm not found!");
+                        }
+
                     } else if (selectedInput.equalsIgnoreCase("q")) {
                         status = false;
+                        System.out.println("Have a nice day!");
                     } else {
                         System.out.println("Oops! Invalid input");
                     }
