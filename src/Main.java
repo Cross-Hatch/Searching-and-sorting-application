@@ -14,6 +14,8 @@ public class Main {
                 String input = userInput.nextLine();
 
                 if (!input.equalsIgnoreCase("Q")) {
+
+                    // Changes user array from string array to integer array
                     int[] array = StringArrayToIntegerArray.method(input);
 
                     System.out.print("Enter\n1 for sorting\n2 for searching\nQ to quit: ");
