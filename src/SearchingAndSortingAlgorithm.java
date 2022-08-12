@@ -2,35 +2,39 @@ import static Algorithms.SearchingAlgorithms.linearSearch;
 import static Algorithms.SortingAlgorithms.bubbleSort;
 import static Algorithms.SortingAlgorithms.selectionSort;
 
+// This class is responsible for handling the searching and sorting
 public class SearchingAndSortingAlgorithm {
 
-    //      SORTING
+    //      SORTING OF ARRAYS
     SearchingAndSortingAlgorithm(String algorithm, int [] array){
-        if (algorithm.equalsIgnoreCase("bubbleSort")){
-            bubbleSort(array);
-            for (int j : array) {
-                System.out.print(j + " ");
+        switch (algorithm){
+            case "bubblesort" -> {
+                bubbleSort(array);
+                for (int j : array) {
+                    System.out.print(j + " ");
+                }
             }
-        }else if (algorithm.equalsIgnoreCase("selectionSort")){
-            selectionSort(array);
-            for (int j : array) {
-                System.out.print(j + " ");
+            case "selectionsort" -> {
+                selectionSort(array);
+                for (int j : array) {
+                    System.out.print(j + " ");
+                }
             }
         }
     }
 
-    //  SEARCHING
+    //  SEARCHING THROUGH ARRAYS
     SearchingAndSortingAlgorithm(String algorithm, int  [] array, int searchNumber){
-        if(algorithm.equalsIgnoreCase("linearSearch")){
-            int index = linearSearch(array, searchNumber);
-            if (index != -1){
-                System.out.println("Element is at index: " + index);
-            }else {
-                System.out.println("Element not found");
+        switch (algorithm) {
+            case "linearsearch" -> {
+                int index = linearSearch(array, searchNumber);
+                if (index != -1) {
+                    System.out.println("Element is at index: " + index);
+                } else {
+                    System.out.println("Element not found");
+                }
             }
         }
     }
 
-    SearchingAndSortingAlgorithm(String algorithm, String  [] array){
-    }
 }
