@@ -16,36 +16,39 @@ public class Main {
                 if (!input.equalsIgnoreCase("Q")) {
                     int[] array = StringArrayToIntegerArray.method(input);
 
-                    System.out.print("Enter 1 for sorting or 2 for searching or Q to quit: ");
-                    String selectedInput = userInput.nextLine();
+                    System.out.print("Enter\n1 for sorting\n2 for searching\nQ to quit: ");
+                    String selectedInput = userInput.nextLine().toLowerCase();
 
-                    if (selectedInput.equalsIgnoreCase("one") || selectedInput.equals("1")) {
-                        System.out.println("Enter sorting algorithm preferred");
-                        String algoSelected = userInput.nextLine().trim();
+                    switch (selectedInput) {
+                        case "one", "1" -> {
+                            System.out.println("Enter sorting algorithm preferred");
+                            String algoSelected = userInput.nextLine().trim().toLowerCase();
 
-                        if (algoSelected.equalsIgnoreCase("bubbleSort") || algoSelected.equalsIgnoreCase("selectionSort")) {
-                            new SearchingAndSortingAlgorithm(algoSelected, array);
-                        } else {
-                            System.out.println("Sorry, sorting algorithm not found!");
+                            if (algoSelected.equals("bubblesort") || algoSelected.equals("selectionsort")) {
+                                new SearchingAndSortingAlgorithm(algoSelected, array);
+                            } else {
+                                System.out.println("Sorry, sorting algorithm not found!");
+                            }
+
                         }
+                        case "two", "2" -> {
+                            System.out.println("Enter searching algorithm preferred");
+                            String algoSelected = userInput.nextLine().trim().toLowerCase();
 
-                    } else if (selectedInput.equalsIgnoreCase("two") || selectedInput.equals("2")) {
-                        System.out.println("Enter searching algorithm preferred");
-                        String algoSelected = userInput.nextLine();
+                            if (algoSelected.equals("linearsearch")) {
+                                System.out.println("Enter number to search for");
+                                int number = userInput.nextInt();
+                                new SearchingAndSortingAlgorithm(algoSelected, array, number);
+                            } else {
+                                System.out.println("Sorry, searching algorithm not found!");
+                            }
 
-                        if (algoSelected.equalsIgnoreCase("linearSearch")) {
-                            System.out.println("Enter number to search for");
-                            int number = userInput.nextInt();
-                            new SearchingAndSortingAlgorithm(algoSelected, array, number);
-                        } else {
-                            System.out.println("Sorry, searching algorithm not found!");
                         }
-
-                    } else if (selectedInput.equalsIgnoreCase("q")) {
-                        status = false;
-                        System.out.println("Have a nice day!");
-                    } else {
-                        System.out.println("Oops! Invalid input");
+                        case "q" -> {
+                            status = false;
+                            System.out.println("Have a nice day!");
+                        }
+                        default -> System.out.println("Oops! Invalid input");
                     }
                 }else {
                     status = false;
