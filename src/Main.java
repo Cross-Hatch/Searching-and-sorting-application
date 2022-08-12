@@ -22,25 +22,30 @@ public class Main {
                     String selectedInput = userInput.nextLine().toLowerCase();
 
                     switch (selectedInput) {
+
+                        //  Sorting of array
                         case "one", "1" -> {
-                            System.out.println("Enter sorting algorithm preferred");
+                            System.out.println("Select sorting algorithm preferred\nBubble sort: 1\nSelection sort: 2");
                             String algoSelected = userInput.nextLine().trim().toLowerCase();
 
-                            if (algoSelected.equals("bubblesort") || algoSelected.equals("selectionsort")) {
+                            if (algoSelected.equals("1") || algoSelected.equals("2")) {
                                 new SearchingAndSortingAlgorithm(algoSelected, array);
                             } else {
                                 System.out.println("Sorry, sorting algorithm not found!");
                             }
 
                         }
+
+                        //  Searching through array
                         case "two", "2" -> {
-                            System.out.println("Enter searching algorithm preferred");
+                            System.out.println("Select searching algorithm preferred\nLinear search: 1\nBinary search: 2");
                             String algoSelected = userInput.nextLine().trim().toLowerCase();
 
-                            if (algoSelected.equals("linearsearch")) {
+                            if (algoSelected.equals("1") || algoSelected.equals("2")) {
                                 System.out.println("Enter number to search for");
                                 int number = userInput.nextInt();
                                 new SearchingAndSortingAlgorithm(algoSelected, array, number);
+                                userInput.nextLine();
                             } else {
                                 System.out.println("Sorry, searching algorithm not found!");
                             }
