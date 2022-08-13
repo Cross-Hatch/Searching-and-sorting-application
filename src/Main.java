@@ -31,7 +31,7 @@ public class Main {
                                     Selection sort: 2
                                     Merge sort: 3
                                     Quick sort: 4""");
-                            String algoSelected = userInput.nextLine().trim().toLowerCase();
+                            String algoSelected = userInput.nextLine().trim();
 
                             if (algoSelected.equals("1") || algoSelected.equals("2") || algoSelected.equals("3")
                                     || algoSelected.equals("4"))
@@ -46,7 +46,7 @@ public class Main {
                         //  Searching through array
                         case "two", "2" -> {
                             System.out.println("Select searching algorithm preferred\nLinear search: 1\nBinary search: 2");
-                            String algoSelected = userInput.nextLine().trim().toLowerCase();
+                            String algoSelected = userInput.nextLine().trim();
 
                             if (algoSelected.equals("1") || algoSelected.equals("2")) {
                                 System.out.println("Enter number to search for");
