@@ -1,7 +1,5 @@
-import static Algorithms.SearchingAlgorithms.binarysearch;
-import static Algorithms.SearchingAlgorithms.linearSearch;
-import static Algorithms.SortingAlgorithms.bubbleSort;
-import static Algorithms.SortingAlgorithms.selectionSort;
+import static Algorithms.SearchingAlgorithms.*;
+import static Algorithms.SortingAlgorithms.*;
 
 // This class is responsible for handling the searching and sorting
 public class SearchingAndSortingAlgorithm {
@@ -18,6 +16,18 @@ public class SearchingAndSortingAlgorithm {
             case "2" -> {
                 selectionSort(array);
                 for (int j : array) {
+                    System.out.print(j + " ");
+                }
+            }
+            case "3" -> {
+                mergeSort(array);
+                for (int j: array){
+                    System.out.print(j + " ");
+                }
+            }
+            case "4" -> {
+                quickSort(array, 0, array.length - 1);
+                for (int j: array){
                     System.out.print(j + " ");
                 }
             }
