@@ -25,10 +25,17 @@ public class Main {
 
                         //  Sorting of array
                         case "one", "1" -> {
-                            System.out.println("Select sorting algorithm preferred\nBubble sort: 1\nSelection sort: 2");
+                            System.out.println("""
+                                    Select sorting algorithm preferred
+                                    Bubble sort: 1
+                                    Selection sort: 2
+                                    Merge sort: 3
+                                    Quick sort: 4""");
                             String algoSelected = userInput.nextLine().trim().toLowerCase();
 
-                            if (algoSelected.equals("1") || algoSelected.equals("2")) {
+                            if (algoSelected.equals("1") || algoSelected.equals("2") || algoSelected.equals("3")
+                                    || algoSelected.equals("4"))
+                            {
                                 new SearchingAndSortingAlgorithm(algoSelected, array);
                             } else {
                                 System.out.println("Sorry, sorting algorithm not found!");
