@@ -6,7 +6,7 @@ public class Main {
 
         Scanner userInput = new Scanner(System.in);
         boolean status = true;
-        System.out.println("Change array later?\n1 Yes\n2 No");
+        System.out.println("Would you like to change the array later during runtime?\n1 Yes\n2 No");
         String choice = userInput.nextLine().trim();
 
         if (choice.equals("1")){
@@ -144,8 +144,9 @@ public class Main {
                     System.out.println("Invalid input");
                 }
             }
+        }else {
+            System.out.println("Invalid choice");
         }
-
 
     }
 }
