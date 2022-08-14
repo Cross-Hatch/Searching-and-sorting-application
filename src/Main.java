@@ -11,7 +11,7 @@ public class Main {
             try{
                 System.out.println();
                 System.out.println("Enter array of numbers separated by single space only or Q to quit");
-                String input = userInput.nextLine();
+                String input = userInput.nextLine().trim();
 
                 if (!input.equalsIgnoreCase("Q")) {
 
