@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String [] args){
+    public static void main(String[] args) {
 
         Scanner userInput = new Scanner(System.in);
         boolean status = true;
 
-        while (status){
-            try{
+        while (status) {
+            try {
                 System.out.println();
                 System.out.print("""
                         Enter an array of numbers separated by single space only. Press Q to quit
@@ -43,8 +43,7 @@ public class Main {
                             String algoSelected = userInput.nextLine().trim();
 
                             if (algoSelected.equals("1") || algoSelected.equals("2") || algoSelected.equals("3")
-                                    || algoSelected.equals("4"))
-                            {
+                                    || algoSelected.equals("4")) {
                                 new SearchingAndSortingAlgorithm(algoSelected, array);
                             } else {
                                 System.out.println("Sorry, sorting algorithm not found!");
@@ -79,11 +78,11 @@ public class Main {
                         }
                         default -> System.out.println("Oops! Invalid input");
                     }
-                }else {
+                } else {
                     status = false;
                     System.out.println("Have a nice day!");
                 }
-            }catch (NumberFormatException exception){
+            } catch (NumberFormatException exception) {
                 System.out.println("Invalid input");
             }
         }
