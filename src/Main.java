@@ -34,11 +34,12 @@ public class Main {
                                     Selection sort: 2
                                     Merge sort: 3
                                     Quick sort: 4
-                                    Insertion sort: 5""");
+                                    Insertion sort: 5
+                                    Shell sort: 6""");
                                 String algoSelected = userInput.nextLine().trim();
 
                                 if (algoSelected.equals("1") || algoSelected.equals("2") || algoSelected.equals("3")
-                                        || algoSelected.equals("4") || algoSelected.equals("5"))
+                                        || algoSelected.equals("4") || algoSelected.equals("5") || algoSelected.equals("6"))
                                 {
                                     new SearchingAndSortingAlgorithm(algoSelected, array);
                                 } else {
@@ -107,11 +108,12 @@ public class Main {
                                     Selection sort: 2
                                     Merge sort: 3
                                     Quick sort: 4
-                                    Insertion sort: 5""");
+                                    Insertion sort: 5
+                                    Shell sort: 6""");
                                 String algoSelected = userInput.nextLine().trim();
 
                                 if (algoSelected.equals("1") || algoSelected.equals("2") || algoSelected.equals("3")
-                                        || algoSelected.equals("4") || algoSelected.equals("5"))
+                                        || algoSelected.equals("4") || algoSelected.equals("5") || algoSelected.equals("6"))
                                 {
                                     new SearchingAndSortingAlgorithm(algoSelected, array);
                                 } else {
