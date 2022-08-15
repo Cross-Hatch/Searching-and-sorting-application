@@ -33,11 +33,12 @@ public class Main {
                                     Bubble sort: 1
                                     Selection sort: 2
                                     Merge sort: 3
-                                    Quick sort: 4""");
+                                    Quick sort: 4
+                                    Insertion sort: 5""");
                                 String algoSelected = userInput.nextLine().trim();
 
                                 if (algoSelected.equals("1") || algoSelected.equals("2") || algoSelected.equals("3")
-                                        || algoSelected.equals("4"))
+                                        || algoSelected.equals("4") || algoSelected.equals("5"))
                                 {
                                     new SearchingAndSortingAlgorithm(algoSelected, array);
                                 } else {
@@ -48,11 +49,14 @@ public class Main {
 
                             //  Searching through array
                             case "two", "2" -> {
-                                System.out.println("Select searching algorithm preferred\nLinear search: 1\nBinary search: 2");
+                                System.out.println("""
+                                        Select searching algorithm preferred
+                                        Linear search: 1
+                                        Binary search: 2""");
                                 String algoSelected = userInput.nextLine().trim();
 
                                 if (algoSelected.equals("1") || algoSelected.equals("2")) {
-                                    System.out.println("Enter number to search for");
+                                    System.out.println("Enter key to search for");
                                     int number = userInput.nextInt();
                                     new SearchingAndSortingAlgorithm(algoSelected, array, number);
                                     userInput.nextLine();
@@ -102,11 +106,12 @@ public class Main {
                                     Bubble sort: 1
                                     Selection sort: 2
                                     Merge sort: 3
-                                    Quick sort: 4""");
+                                    Quick sort: 4
+                                    Insertion sort: 5""");
                                 String algoSelected = userInput.nextLine().trim();
 
                                 if (algoSelected.equals("1") || algoSelected.equals("2") || algoSelected.equals("3")
-                                        || algoSelected.equals("4"))
+                                        || algoSelected.equals("4") || algoSelected.equals("5"))
                                 {
                                     new SearchingAndSortingAlgorithm(algoSelected, array);
                                 } else {
@@ -117,11 +122,14 @@ public class Main {
 
                             //  Searching through array
                             case "two", "2" -> {
-                                System.out.println("Select searching algorithm preferred\nLinear search: 1\nBinary search: 2");
+                                System.out.println("""
+                                        Select searching algorithm preferred
+                                        Linear search: 1
+                                        Binary search: 2""");
                                 String algoSelected = userInput.nextLine().trim();
 
                                 if (algoSelected.equals("1") || algoSelected.equals("2")) {
-                                    System.out.println("Enter number to search for");
+                                    System.out.println("Enter key to search for");
                                     int number = userInput.nextInt();
                                     new SearchingAndSortingAlgorithm(algoSelected, array, number);
                                     userInput.nextLine();
