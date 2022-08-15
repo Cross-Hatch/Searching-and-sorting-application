@@ -37,6 +37,12 @@ public class SearchingAndSortingAlgorithm {
                     System.out.print(j + " ");
                 }
             }
+            case "6" -> {
+                shellSort(array);
+                for (int j: array){
+                    System.out.print(j + " ");
+                }
+            }
         }
     }
 
