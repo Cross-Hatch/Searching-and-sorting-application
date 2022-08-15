@@ -31,6 +31,12 @@ public class SearchingAndSortingAlgorithm {
                     System.out.print(j + " ");
                 }
             }
+            case "5" -> {
+                insertionSort(array);
+                for (int j: array){
+                    System.out.print(j + " ");
+                }
+            }
         }
     }
 
