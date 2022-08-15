@@ -1,6 +1,23 @@
 package Algorithms;
 
 public class SortingAlgorithms {
+    public static void shellSort(int [] array){
+        for (int gap = array.length / 2; gap > 0; gap /= 2){
+
+            for (int i = gap; i < array.length; i++){
+                int newValue = array[i];
+                int j = i;
+
+                while (j >= gap && array[j - gap] > newValue){
+                    array[j] = array[j - gap];
+                    j -= gap;
+                }
+
+                array[j] = newValue;
+            }
+        }
+    }
+
     public static void insertionSort(int [] array){
         for (int i = 1; i < array.length; i++){
             int temp = array[i];
