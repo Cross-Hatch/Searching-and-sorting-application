@@ -10,7 +10,9 @@ public class Main {
         while (status){
             try{
                 System.out.println();
-                System.out.println("Enter array of numbers separated by single space only or Q to quit");
+                System.out.print("""
+                        Enter an array of numbers separated by single space only. Press Q to quit
+                        >\040""");
                 String input = userInput.nextLine();
 
                 if (!input.equalsIgnoreCase("Q")) {
@@ -18,19 +20,26 @@ public class Main {
                     // Changes user array from string array to integer array
                     int[] array = StringArrayToIntegerArray.method(input);
 
-                    System.out.print("Enter\n1 for sorting\n2 for searching\nQ to quit: ");
+                    System.out.print("""
+                            \nSelect a number below
+                            1. Sorting Algorithms
+                            2. Searching Algorithms
+                            Q to quit
+                            >\040""");
+
                     String selectedInput = userInput.nextLine().toLowerCase();
 
                     switch (selectedInput) {
 
                         //  Sorting of array
                         case "one", "1" -> {
-                            System.out.println("""
-                                    Select sorting algorithm preferred
-                                    Bubble sort: 1
-                                    Selection sort: 2
-                                    Merge sort: 3
-                                    Quick sort: 4""");
+                            System.out.print("""
+                                    \nSelect your preferred sorting algorithm
+                                    1. Bubble sort
+                                    2. Selection sort
+                                    3. Merge sort
+                                    4. Quick sort
+                                    >\040""");
                             String algoSelected = userInput.nextLine().trim();
 
                             if (algoSelected.equals("1") || algoSelected.equals("2") || algoSelected.equals("3")
@@ -45,11 +54,17 @@ public class Main {
 
                         //  Searching through array
                         case "two", "2" -> {
-                            System.out.println("Select searching algorithm preferred\nLinear search: 1\nBinary search: 2");
+                            System.out.print("""
+                                    \nSelect your preferred searching algorithm " +
+                                    "1. Linear search" +
+                                    "2. Binary search
+                                    >\040""");
                             String algoSelected = userInput.nextLine().trim();
 
                             if (algoSelected.equals("1") || algoSelected.equals("2")) {
-                                System.out.println("Enter number to search for");
+                                System.out.print("""
+                                        \nEnter a key to search for it.
+                                        >\040""");
                                 int number = userInput.nextInt();
                                 new SearchingAndSortingAlgorithm(algoSelected, array, number);
                                 userInput.nextLine();
