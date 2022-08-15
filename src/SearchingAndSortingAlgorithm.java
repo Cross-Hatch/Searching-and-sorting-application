@@ -43,6 +43,13 @@ public class SearchingAndSortingAlgorithm {
                     System.out.print(j + " ");
                 }
             }
+            // For now, the radixSort should only be used for arrays with elements with width of 2
+            case "7" -> {
+                radixSort(array, 10, 2);
+                for (int j: array){
+                    System.out.print(j + " ");
+                }
+            }
         }
     }
 
