@@ -43,7 +43,12 @@ public class Main {
                                         || algoSelected.equals("4") || algoSelected.equals("5")
                                         || algoSelected.equals("6") || algoSelected.equals("7"))
                                 {
-                                    new SearchingAndSortingAlgorithm(algoSelected, array);
+                                    try {
+                                        new SearchingAndSortingAlgorithm(algoSelected, array);
+                                    }
+                                    catch (ArrayIndexOutOfBoundsException exception) {
+                                        System.out.println("For now, array should contain positive numbers only for radix sort");
+                                    }
                                 } else {
                                     System.out.println("Sorry, sorting algorithm not found!");
                                 }
@@ -119,7 +124,12 @@ public class Main {
                                         || algoSelected.equals("4") || algoSelected.equals("5")
                                         || algoSelected.equals("6") || algoSelected.equals("7"))
                                 {
-                                    new SearchingAndSortingAlgorithm(algoSelected, array);
+                                    try {
+                                        new SearchingAndSortingAlgorithm(algoSelected, array);
+                                    }
+                                    catch (ArrayIndexOutOfBoundsException exception) {
+                                        System.out.println("For now, array should contain positive numbers only for radix sort");
+                                    }
                                 } else {
                                     System.out.println("Sorry, sorting algorithm not found!");
                                 }
