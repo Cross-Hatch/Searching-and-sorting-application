@@ -7,50 +7,32 @@ public class SearchingAndSortingAlgorithm {
     //      SORTING OF ARRAYS
     SearchingAndSortingAlgorithm(String algorithm, int [] array){
         switch (algorithm){
-            case "1" -> {
+            case "1" ->
                 bubbleSort(array);
-                for (int j : array) {
-                    System.out.print(j + " ");
-                }
-            }
-            case "2" -> {
+
+            case "2" ->
                 selectionSort(array);
-                for (int j : array) {
-                    System.out.print(j + " ");
-                }
-            }
-            case "3" -> {
+
+            case "3" ->
                 mergeSort(array);
-                for (int j: array){
-                    System.out.print(j + " ");
-                }
-            }
-            case "4" -> {
+
+            case "4" ->
                 quickSort(array, 0, array.length - 1);
-                for (int j: array){
-                    System.out.print(j + " ");
-                }
-            }
-            case "5" -> {
+
+            case "5" ->
                 insertionSort(array);
-                for (int j: array){
-                    System.out.print(j + " ");
-                }
-            }
-            case "6" -> {
+
+            case "6" ->
                 shellSort(array);
-                for (int j: array){
-                    System.out.print(j + " ");
-                }
-            }
+
             // For now, the radixSort should only be used for arrays with elements with width of 2
-            case "7" -> {
+            case "7" ->
                 radixSort(array, 10, 2);
-                for (int j: array){
-                    System.out.print(j + " ");
-                }
-            }
         }
+
+        // Prints sorted array to the console
+        for(int j : array)
+            System.out.print(j + " ");
     }
 
     //  SEARCHING THROUGH ARRAYS
